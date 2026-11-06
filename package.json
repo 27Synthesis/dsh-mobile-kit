@@ -1,0 +1,50 @@
+{
+  "name": "local-mobile-kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "description": "鲸鲸手机工具箱：图片 / 压缩包 / 表格 / 网页落盘 / SQLite 查询 + 插件健康自检",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dshGo": {
+    "v": 1,
+    "title": {
+      "zh": "鲸鲸工具箱",
+      "en": "Whale Kit"
+    },
+    "icon": "wrench",
+    "wants": [],
+    "contributes": {
+      "composer.strip": [
+        {
+          "id": "health",
+          "icon": "wrench",
+          "panel": "kit"
+        }
+      ],
+      "panels": [
+        {
+          "id": "kit",
+          "title": "工具箱健康",
+          "icon": "wrench",
+          "placement": [
+            "session.tab",
+            "features"
+          ]
+        }
+      ]
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/27Synthesis/dsh-mobile-kit.git"
+  }
+}
